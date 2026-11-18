@@ -1,0 +1,95 @@
+2026-11-18 09:16:08 | ERROR | Se capturo una excepcion personalizada. | DatosInvalidosError: Dato de prueba no valido.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_logs.py", line 60, in ejecutar_prueba_logs
+    raise DatosInvalidosError(
+        "Dato de prueba no valido."
+    )
+sistema.excepciones.DatosInvalidosError: Dato de prueba no valido.
+2026-11-18 09:20:39 | ERROR | Se detecto una tarifa con formato incorrecto. | DatosInvalidosError: No fue posible convertir la tarifa a un entero positivo.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 16, in convertir_tarifa
+    tarifa = int(valor)
+ValueError: invalid literal for int() with base 10: 'abc'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 52, in ejecutar_pruebas
+    convertir_tarifa("abc")
+    ~~~~~~~~~~~~~~~~^^^^^^^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 24, in convertir_tarifa
+    raise DatosInvalidosError(
+        "No fue posible convertir la tarifa a un entero positivo."
+    ) from error
+sistema.excepciones.DatosInvalidosError: No fue posible convertir la tarifa a un entero positivo.
+2026-11-18 09:20:39 | ERROR | Se detecto una tarifa negativa. | DatosInvalidosError: No fue posible convertir la tarifa a un entero positivo.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 19, in convertir_tarifa
+    raise ValueError("La tarifa debe ser mayor que cero.")
+ValueError: La tarifa debe ser mayor que cero.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 74, in ejecutar_pruebas
+    convertir_tarifa("-1000")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\pruebas\test_excepciones.py", line 24, in convertir_tarifa
+    raise DatosInvalidosError(
+        "No fue posible convertir la tarifa a un entero positivo."
+    ) from error
+sistema.excepciones.DatosInvalidosError: No fue posible convertir la tarifa a un entero positivo.
+2026-11-18 09:24:03 | ERROR | Error al confirmar la reserva 52003e75-3f05-481e-9cca-cd9147aa4c7c. | ReservaError: Solo se pueden confirmar reservas pendientes.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 166, in confirmar
+    raise ReservaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+sistema.excepciones.ReservaError: Solo se pueden confirmar reservas pendientes.
+2026-11-18 09:24:03 | ERROR | Error al confirmar la reserva 109577ae-8f61-4aff-bcd9-00779ffbf3b3. | ServicioNoDisponibleError: El equipo no se encuentra disponible.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 171, in confirmar
+    self._total = self._calcular_costo_reserva()
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 148, in _calcular_costo_reserva
+    return self._servicio.calcular_costo(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._duracion,
+        ^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        impuesto=self._impuesto
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\alquiler_equipo.py", line 51, in calcular_costo
+    raise ServicioNoDisponibleError(
+        "El equipo no se encuentra disponible."
+    )
+sistema.excepciones.ServicioNoDisponibleError: El equipo no se encuentra disponible.
+2026-11-18 09:27:43 | ERROR | Error al confirmar la reserva ed5a6a43-eb9d-4ce6-b253-2d719989baa5. | ReservaError: Solo se pueden confirmar reservas pendientes.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 166, in confirmar
+    raise ReservaError(
+        "Solo se pueden confirmar reservas pendientes."
+    )
+sistema.excepciones.ReservaError: Solo se pueden confirmar reservas pendientes.
+2026-11-18 09:27:43 | ERROR | Error al confirmar la reserva 3b65cf50-1485-4a09-9019-4727c9359e7b. | ServicioNoDisponibleError: El equipo no se encuentra disponible.
+Traceback (most recent call last):
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 171, in confirmar
+    self._total = self._calcular_costo_reserva()
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\reserva.py", line 148, in _calcular_costo_reserva
+    return self._servicio.calcular_costo(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._duracion,
+        ^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        impuesto=self._impuesto
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "G:\Mi unidad\Unad\Programacion\Actividad 4\Sistema_Gestion_Software_FJ\Sistema_Gestion_Software_FJ\sistema\alquiler_equipo.py", line 51, in calcular_costo
+    raise ServicioNoDisponibleError(
+        "El equipo no se encuentra disponible."
+    )
+sistema.excepciones.ServicioNoDisponibleError: El equipo no se encuentra disponible.
